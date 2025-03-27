@@ -10,7 +10,8 @@ class Server {
     this.port = process.env.PORT || 3001;
     this.corsOptions = {
       origin: "*",
-      optionsSuccessStatus: 200,
+      methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+      allowedHeaders: ["Content-Type", "Authorization"],
     };
     this.basePath = "/api/";
 
